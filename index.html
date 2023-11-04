@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A TÉRKÉPÉSZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/terkep.svg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="content">
+        <div class="center">
+            <div>
+                <h1>A TÉRKÉPÉSZ</h1>
+                <div class="playground">
+                    <div class="resultHolder invisible">
+                        <div>
+                            <p>Összes pontod:</p>
+                            <button onclick="refresh()">új játék</button>
+                        </div>
+                        <p class="result">0</p>
+                    </div>
+                </div>
+            </div>
+                <div class="dashboard">
+                <div class="seasons">
+                    <div class="seasonNames">
+                        <p>tavasz</p>
+                        <p>nyár</p>
+                        <p>ősz</p>
+                        <p>tél</p>
+                    </div>
+                    <div class="pointer">
+                        <img src="assets/pointer.png" alt="">
+                    </div>
+                    <div class="timer"></div>
+                    <div class="ticks">
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="springTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="summerTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="autumnTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                        <div class="winterTick"></div>
+                    </div>
+                    <div class="pointsHolder">
+                        <div class="springPoints">
+                            0
+                            <div class="seasonCode">AB</div>
+                        </div>
+                        <div class="summerPoints">
+                            0
+                            <div class="seasonCode">BC</div>
+                        </div>
+                        <div class="autumnPoints">
+                            0
+                            <div class="seasonCode">CD</div>
+                        </div>
+                        <div class="winterPoints">
+                            0
+                            <div class="seasonCode">DA</div>
+                        </div>
+                    </div>
+                </div>
+                <section class="newElemHolder">
+                    <div class="clock">
+                        <p class="clockText"></p>
+                        <img src="assets/clock.png" alt="">
+                    </div>
+                    <div>
+                        <h2>új elem:</h2>
+                        <button onclick="mirror()">tükrözés</button>
+                        <button onclick="rotate()">forgatás</button>
+                    </div>
+                    <div class="newElem"></div>
+                </section>
+                <h2 class="challengesHeader">küldetések:</h2>
+                <div class="challenges"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

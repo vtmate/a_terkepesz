@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    --white: rgb(245, 242, 233);
+    /* --beige: rgb(228, 189, 125); */
+    /* --beige: rgb(202, 171, 130); */
+    /* --beige: #F1AC34; */
+    --beige: #EFE2B3;
+    --beige-tr: #efe2b398;
+    --gray: #363636;
+    --black: #2C1402;
+    font-family: 'Itim', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+body{
+    background-image: url(assets/background.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    overscroll-behavior: none;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #e4d785, #ffffff);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 53rem;
+}
+
+h1{
+    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--black);
+}
+
+.playground{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    background-color: var(--white);
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.field{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--beige);
+    border-radius: 0.2rem;
+    position: relative;
+    margin: 0.1rem;
+    transition: none;
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2rem;
+    transition: none;
+}
+
+.forest, .mountains, .town, .water, .farm{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-position: center;
+    background-size: contain;
+}
+
+.forest { background-image: url('assets/forest.png');}
+.mountains { background-image: url('assets/mountains.png');}
+.town { background-image: url('assets/village.png');}
+.water { background-image: url('assets/water.png');}
+.farm { background-image: url('assets/wheat.png');}
+
+
+
+.dashboard{
+    width: 20rem;
+    background-color: var(--beige-tr);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.seasons{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+
+.seasonNames{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+}
+
+.seasonNames p{
+    font-size: 1.3rem;
+
+}
+
+.pointer{
+    position: absolute;
+    top: 2rem;
+    left: -0.5px;
+    z-index: 2;
+}
+
+.pointer img{
+    width: 1rem;
+}
+
+.ticks{
+    justify-content: space-between;
+    display: flex;
+    margin-inline: 1rem;
+}
+
+.springTick, .summerTick, .autumnTick, .winterTick{
+    height: 1.2rem;
+    width: 0.3rem;
+    z-index: 1;
+    margin-top: 1rem;
+    border-radius: 2px;
+}
+.springTick {background-color: pink;}
+.summerTick {background-color: gold;}
+.autumnTick {background-color: orange;}
+.winterTick {background-color: lightskyblue;}
+
+.timer{
+    background-color: var(--white);
+    height: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    width: 100%;
+}
+
+.pointsHolder{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 2rem;
+    margin-top: 1rem;
+}
+
+.springPoints, .summerPoints, .autumnPoints, .winterPoints{
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: var(--white);
+    border: solid 0.2rem var(--white);
+    position: relative;
+}
+
+.springPoints {background-color: pink;}
+.summerPoints {background-color: gold;}
+.autumnPoints {background-color: orange;}
+.winterPoints {background-color: lightskyblue;}
+
+.seasonCode{
+    position: absolute;
+    top: -0.5rem;
+    right: -0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.newElemHolder{
+    position: relative;
+    background-color: var(--white);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.clock{
+    display: flex;
+    position: absolute;
+    top: -0.9rem;
+    right: -0.5rem;
+    align-items: center;
+    background-color: var(--white);
+    /* border: solid 3px var(--beige); */
+    border-radius: 0.5rem;
+    padding-inline: 0.2rem;
+}
+
+.clock img{
+    width: 1.2rem;
+}
+
+.clock p{
+    display: inline-block;
+    color: var(--black);
+    font-size: 1.7rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+h2{
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.card{
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+button{
+    text-align: center;
+    width: 8rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--beige);
+    color: var(--black);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+.challengesHeader{
+    margin: 0.5rem 0rem;
+}
+
+.challenges{
+    height: 11.2rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+    border-radius: 0.2rem;
+}
+
+.challengeHolder{
+    position: relative;
+}
+
+.challenge{
+    width: 18.5rem;
+    margin-top: 0.2rem
+}
+
+.category{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.9rem;
+}
+
+.counter{
+    position: absolute;
+    bottom: 0.7rem;
+    right: 1rem;
+    color: var(--white);
+}
+
+.notActive img{
+    filter: blur(0.8px);
+}
+
+.notActive::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed (0.5 for 50% gray) */
+    z-index: 1; /* Ensure the overlay is above the image */
+    
+    width: 18.5rem;
+    border-radius: 0.3rem;
+    margin-top: 0.2rem;
+    height: 11.2rem;
+}
+
+.end::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--beige-tr);
+    z-index: 1;
+    border-radius: 0.2rem;
+}
+
+.resultHolder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: var(--white);
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.invisible{
+    display: none;
+}
+
+.resultHolder button{
+    width: 10rem;
+}
+
+.result{
+    font-size: 7rem;
+    margin: -2rem 0;
+    margin-left: 1rem;
+}
