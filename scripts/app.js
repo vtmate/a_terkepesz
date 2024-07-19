@@ -73,7 +73,6 @@ class Card{
             for (var j = 0; j < 3; j++){
                 if(this.element.shape[i][j] == 1){
                     fields[i*3 + j].classList.add(this.element.type);
-                    console.log(this.element.type)
                 } else {
                     fields[i*3 + j].classList.remove(this.element.type);
                 }
@@ -142,7 +141,6 @@ for(let i = 0; i < 4; i++){
     challengeNames.splice(randomNameIndex, 1);
 }
 
-console.log(typeof(challengeHolders[0]));
 challengeHolders[2].classList.add('notActive');
 challengeHolders[3].classList.add('notActive');
 
@@ -156,7 +154,6 @@ function newRound() {
     time += elements[newCardIndex].time*10.5;
     timer += elements[newCardIndex].time;
     
-    console.log('timer: ' + timer);
     pointer.style.left = time + "px";
     if (timer > 7 && currentSeason == 'spring') {
         currentSeason = 'summer';

@@ -352,3 +352,25 @@ button:hover{
     margin: -2rem 0;
     margin-left: 1rem;
 }
+
+.mobilemsg{
+    display: none;
+}
+
+@media only screen and (max-width: 812px){
+    .center{
+        display: none;
+    }
+    .mobilemsg{
+        display: block;
+        background-color: var(--beige-tr);
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-inline: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .mobilemsg h2{
+        margin-bottom: 2rem;
+    }
+}
